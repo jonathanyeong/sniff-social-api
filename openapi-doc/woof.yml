@@ -1,0 +1,26 @@
+openapi: '3.1.0'
+info:
+  title: Sniff Social API
+  summary: A social network for dog owners
+  description: This API defines how dog owners can communicate over Sniff Social.
+  version: unstable
+paths:
+  /woofs:
+    get:
+      description: Return all woofs that a user has posted
+      responses:
+        '200':
+          description: List of woofs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/woof'
+    post:
+      description: Create a woof for a user
+      requestBody:
+      responses:
+
+
+components:
